@@ -23,7 +23,7 @@
 ### TO:DO
 #### Main features
 - [ ] Database connection
-- [ ] Getting banlists
+- [ ] Getting banlists (Partially)
 - [ ] Autoban and enabling this
 - [ ] Localization for Russians
 
