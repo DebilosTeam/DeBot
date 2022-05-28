@@ -1,0 +1,20 @@
+{
+    "INFO_EMBED": {
+        "title": "Information about bot",
+        "author_footer": "Author",
+        "uptime_footer": "Uptime",
+        "version_footer": "Version",
+        "library_footer": "Disnake",
+        "last_base_update_footer": "Last base update"
+    },
+    "HELP_EMBED": {
+        "title": "Commands list",
+        "description": "Hello, you called help command, all the bot commands will be here",
+	  "selection_menu": {
+        "user_cmd_option_lable": "User commands",
+        "user_cmd_option_description": "Commands available to all",
+		"server_owner_cmd_option_lable": "Server owner commands",
+		"server_owner_cmd_option_description": "Commands for bot control",
+	  }
+    }
+}

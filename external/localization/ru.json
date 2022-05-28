@@ -1,0 +1,36 @@
+{
+    "INFO_EMBED":{
+        "title":"Информация о боте",
+        "author_footer":"Автор",
+        "uptime_footer":"Аптайм",
+        "version_footer":"Версия",
+        "library_footer":"Disnake ",
+        "last_base_update_footer":"Последнее обновление базы"
+    },
+    "HELP_EMBED":{
+        "title":"Список команд",
+        "description":"Привет, вы вызвали команду help, здесь будут все команды бота!",
+        "selection_menu":{
+            "user_cmd_option_lable":"Пользовательские команды",
+            "user_cmd_option_description":"Общедоступные команды",
+            "server_owner_cmd_option_lable":"Команды для владельцев серверов",
+            "server_owner_cmd_option_description":"Управление префиксом и т.д."
+        }
+    },
+    "ACTIVATE_EMBED":{
+        "title":"Конфигуратор бота",
+        "description":"Объедененная серверная база бан листов активирована."
+    },
+    "DEACTIVATE_EMBED":{
+        "title":"Конфигуратор бота",
+        "description":"Объедененная серверная база бан листов деактивирована."
+    },
+    "SET_PREFIX_EMBED":{
+        "title":"Конфигуратор бота",
+        "description":"Мой префикс на сервере теперь: "
+    },
+    "SET_LANGUAGE_EMBED":{
+        "title":"Конфигуратор бота",
+        "description":"Язык бота на сервере теперь: Русский."
+    }
+}
