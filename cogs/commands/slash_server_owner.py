@@ -1,7 +1,6 @@
 from disnake import CommandInteraction, Embed
 from disnake.ext import commands
 
-from json import dump, load
 from datetime import datetime
 
 
@@ -40,19 +39,13 @@ class SlashSOCmd(commands.Cog):
     @commands.guild_only()
     async def _setprefix(self, inter: CommandInteraction, prefix):
         setPrefixEmbed = Embed(title='Bot configuration',
-                               description=f'Server prefix is now `{prefix}`',
-                               timestamp=datetime.utcnow(),
-                               color=0xb49dd4)
+                               description=f'Bot server prefix is now `{prefix}`',
+                               color=0xb49dd4,
+                               timestamp=datetime.utcnow())
         setPrefixEmbed.set_author(name=f'Debilos Network Unified Server Ban List',
                                   icon_url=f'{self.bot.user.display_avatar}')
 
-        with open('prefixes.json', 'r') as json_file:
-            prefixes = load(json_file)
-
-        prefixes[str(inter.guild.id)] = prefix
-
-        with open('prefixes.json', 'w') as json_file:
-            dump(prefixes, json_file, indent=4)
+        await self.bot.db.execute('UPDATE guild_prefixes SET prefix = $1 WHERE "id" = $2', prefix, inter.guild.id)
 
         await inter.response.send_message(embed=setPrefixEmbed)
 

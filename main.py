@@ -1,16 +1,15 @@
-from disnake import Intents, Message, Game, Guild
+from disnake import Intents, Game
 from disnake.ext import commands
 
-import asyncpg
 from os import listdir
-from json import load, dump
+from asyncpg import create_pool
+from cogs.events.prefix_getting import get_prefix
 
-DEFAULT_PREFIX = '-'
 
 class DNUSBL(commands.Bot):
     def __init__(self):
         super().__init__(
-            command_prefix=DEFAULT_PREFIX,
+            command_prefix=get_prefix,
             intents=Intents.all(),
             sync_commands_debug=True,
             help_command=None
@@ -36,12 +35,9 @@ class DNUSBL(commands.Bot):
         await bot.change_presence(activity=Game(name='/help'))
 
     async def create_db_pool(self):
-        db = await asyncpg.create_pool(dsn='postgres://postgres:1234@localhost:5432/dnusbl-db')
-        await db.execute('CREATE TABLE IF NOT EXISTS guild_prefixes(id bigint, prefix text)')
-        await db.execute('CREATE TABLE IF NOT EXISTS banlists(guild_id bigint, banned_users bigint)')
+        bot.db = await create_pool(dsn='postgres://postgres:1234@localhost:5432/dnusbl')
 
 
 bot = DNUSBL()
 bot.load_all_extensions()
-bot.loop.run_until_complete(bot.create_db_pool())
 bot.run('')

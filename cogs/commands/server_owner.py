@@ -1,7 +1,6 @@
 from disnake.ext import commands
 from disnake import Embed
 
-from json import dump, load
 from datetime import datetime
 
 
@@ -46,13 +45,7 @@ class SOCmd(commands.Cog):
         setPrefixEmbed.set_author(name=f'Debilos Network Unified Server Ban List',
                                   icon_url=f'{self.bot.user.display_avatar}')
 
-        with open('prefixes.json', 'r') as json_file:
-            prefixes = load(json_file)
-
-        prefixes[str(ctx.guild.id)] = prefix
-
-        with open('prefixes.json', 'w') as json_file:
-            dump(prefixes, json_file, indent=4)
+        await self.bot.db.execute('UPDATE guild_prefixes SET prefix = $1 WHERE "id" = $2', prefix, ctx.guild.id)
 
         await ctx.send(embed=setPrefixEmbed)
 
