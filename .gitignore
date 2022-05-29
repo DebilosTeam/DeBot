@@ -1,5 +1,4 @@
 /.idea
 /Pipfile
 /Pipfile.lock
-/cogs/events/prefix_getting.py
 /__pycache__
