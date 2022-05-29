@@ -25,7 +25,7 @@
 - [ ] Database connection
 - [ ] Getting banlists (Partially)
 - [ ] Autoban and enabling this
-- [ ] Localization for Russians
+- [ ] Localization
 
 ### Something is broken right now
 Nothing is broken
