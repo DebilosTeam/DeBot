@@ -1,4 +1,4 @@
-from disnake import Intents, Game
+from disnake import Intents, Game, Guild
 from disnake.ext import commands
 
 from os import listdir
@@ -14,6 +14,8 @@ class DNUSBL(commands.Bot):
             sync_commands_debug=True,
             help_command=None
         )
+        self.DEFAULT_LANG = 'en'
+        self.GUILD = Guild
 
     def load_all_extensions(self):
         for event in listdir('cogs/events'):
@@ -36,8 +38,9 @@ class DNUSBL(commands.Bot):
 
     async def create_db_pool(self):
         bot.db = await create_pool(dsn='postgres://postgres:1234@localhost:5432/dnusbl')
+        await bot.db.execute('CREATE TABLE IF NOT EXISTS guild_configuration (id bigint, prefix text, language text);')
 
 
 bot = DNUSBL()
 bot.load_all_extensions()
-bot.run('')
+bot.run('OTc2NTUxNzc5MTAzODM0MTY0.GMi7F7.bCvJQWwzgVF-NEmcfMw1Y2ZdsiBOVT3VT2vI9g')
