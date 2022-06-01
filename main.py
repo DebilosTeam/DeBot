@@ -43,4 +43,4 @@ class DNUSBL(commands.Bot):
 
 bot = DNUSBL()
 bot.load_all_extensions()
-bot.run('OTc2NTUxNzc5MTAzODM0MTY0.GMi7F7.bCvJQWwzgVF-NEmcfMw1Y2ZdsiBOVT3VT2vI9g')
+bot.run('')
