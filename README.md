@@ -8,9 +8,9 @@
 </div>
 
 <div align="center">
-  <a href="https://gitlab.com/Developers-of-Debilos-Empire/DeBot/-/issues">Send bug report</a>
+  <a href="https://gitlab.com/DebilosTeam/DeBot/-/issues">Send bug report</a>
   •
-  <a href="https://gitlab.com/Developers-of-Debilos-Empire/DeBot#something-is-broken-right-now">Broked features</a>
+  <a href="https://gitlab.com/DebilosTeam/DeBot#something-is-broken-right-now">Broked features</a>
 </div>
 
 ### TO:DO
