@@ -1,10 +1,10 @@
 <div align="center">
 
-  # Debilos Network Unified Server Ban List or DNUSBL
+  # DeBot
 </div>
 <div align="center">
 
-  # Unified server ban list by Debilos for Discord
+  # Multifuncional bot for Discord
 </div>
 
 <div align="center">
