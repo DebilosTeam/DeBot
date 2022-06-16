@@ -17,10 +17,7 @@
 
 ### TO:DO
 #### Main features
-- [ ] Database connection
-- [ ] Getting banlists (Partially)
-- [ ] Autoban and enabling this
-- [ ] Localization
+W.I.P
 
 ## Something is broken right now
 Nothing is broken
