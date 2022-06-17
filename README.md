@@ -4,7 +4,7 @@
 </div>
 <div align="center">
 
-  # Multifuncional bot for Discord
+  # Multifunctional bot for Discord
 </div>
 
 <div align="center">
