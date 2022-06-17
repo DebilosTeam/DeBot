@@ -16,7 +16,7 @@
 </div>
 
 ## TO:DO
-#### Main features
+### Main features
 W.I.P
 
 ## Something is broken right now
