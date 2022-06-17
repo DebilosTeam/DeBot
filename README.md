@@ -15,7 +15,7 @@
   <a href="https://gitlab.com/DebilosTeam/DeBot#license">Broked features</a>
 </div>
 
-### TO:DO
+## TO:DO
 #### Main features
 W.I.P
 
