@@ -15,13 +15,17 @@
   <a href="https://gitlab.com/DebilosTeam/DeBot#license">Broked features</a>
 </div>
 
-## TO:DO
+## TODO
 ### Main features
-- [ ] Default base of bot
-- [ ] Slash commands
 - [ ] Basic commands
 - [ ] Fun commands
-- [ ] Unified banlist function
+- [ ] Moderation commands
+- [ ] Server owner commands
+- [ ] Slash commands
+- [ ] Unified ban list function
+
+### Other
+- [ ] Dashboard
 
 ## Something is broken right now
 Nothing is broken
