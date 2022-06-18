@@ -19,6 +19,9 @@
 ### Main features
 - [ ] Default base of bot
 - [ ] Slash commands
+- [ ] Basic commands
+- [ ] Fun commands
+- [ ] Unified banlist function
 
 ## Something is broken right now
 Nothing is broken
