@@ -17,7 +17,8 @@
 
 ## TO:DO
 ### Main features
-W.I.P
+- [ ] Default base of bot
+- [ ] Slash commands
 
 ## Something is broken right now
 Nothing is broken
