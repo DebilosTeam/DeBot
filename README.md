@@ -10,9 +10,11 @@
 <div align="center">
   <a href="https://gitlab.com/DebilosTeam/DeBot/-/issues">Send bug report</a>
   •
-  <a href="https://gitlab.com/DebilosTeam/DeBot#something-is-broken-right-now">Broked features</a>
+  <a href="https://gitlab.com/DebilosTeam/DeBot#something-is-broken-right-now">Broken features</a>
   •
-  <a href="https://gitlab.com/DebilosTeam/DeBot#license">Broked features</a>
+  <a href="https://gitlab.com/DebilosTeam/DeBot#TODO">TODO</a>
+  •
+  <a href="https://gitlab.com/DebilosTeam/DeBot#license">License</a>
 </div>
 
 ## TODO
