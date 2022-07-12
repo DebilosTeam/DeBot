@@ -7,6 +7,7 @@ from time import time
 
 class Info(commands.Cog):
     def __init__(self, bot):
+        ```Help cog init```
         self.bot: commands.Bot = bot
         self.start_time = time()
 

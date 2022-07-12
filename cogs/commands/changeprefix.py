@@ -1,4 +1,4 @@
-from disnake import Embed, ui, SelectOption
+from disnake import Embed
 from disnake.ext import commands
 
 from datetime import datetime
@@ -6,6 +6,7 @@ from datetime import datetime
 
 class ChangePrefix(commands.Cog):
     def __init__(self, bot):
+        ```Help cog init```
         self.bot: commands.Bot = bot
 
     @commands.command()

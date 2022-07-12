@@ -19,6 +19,7 @@ async def get_prefix(bot, message):
 
 class Ready(commands.Cog):
     def __init__(self, bot):
+        ```Help cog init```
         self.bot: commands.Bot = bot
 
     @commands.Cog.listener()

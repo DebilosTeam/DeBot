@@ -6,6 +6,7 @@ from datetime import datetime
 
 class Clear(commands.Cog):
     def __init__(self, bot):
+        ```Help cog init```
         self.bot: commands.Bot = bot
 
     @commands.command(pass_context=True)

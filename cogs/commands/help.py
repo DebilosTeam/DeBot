@@ -32,6 +32,7 @@ class Embeds:
 
 class Dropdown(ui.Select):
     def __init__(self):
+        ```Help cog init```
         options = [
             SelectOption(label='User commands', description='Commands available to all'),
             SelectOption(label='Fun commands', description='Just commands like 8ball and etc'),
@@ -62,6 +63,7 @@ class DropdownView(ui.View):
 
 class Help(commands.Cog):
     def __init__(self, bot):
+        ```Help cog init```
         self.bot: commands.Bot = bot
 
     @commands.command()
