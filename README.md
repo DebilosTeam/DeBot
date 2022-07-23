@@ -19,11 +19,10 @@
 
 ## TODO
 ### Main features
-- [ ] Basic commands
+- [ ] Slash commands
 - [ ] Fun commands
 - [ ] Moderation commands
 - [ ] Server owner commands
-- [ ] Slash commands
 - [ ] Unified ban list function
 
 ### Other
