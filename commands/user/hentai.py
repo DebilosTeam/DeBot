@@ -1,5 +1,3 @@
-import asyncio
-
 from disnake.ext import commands
 from disnake import Embed
 from datetime import datetime
