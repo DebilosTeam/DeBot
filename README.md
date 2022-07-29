@@ -20,23 +20,13 @@
 ## TODO
 ### Main features
 - [X] Slash commands (Implemented in disnake)
-
-
 - [ ] Fun commands
-
-
 - [ ] Moderation commands
-
-
 - [ ] Server owner commands
-
-
 - [ ] Unified ban list function
 
 ### Other
 - [ ] Dashboard
-
-
 - [ ] Add localization for Russian and Ukraine languages
 
 ## Something is broken right now
