@@ -3,6 +3,7 @@ from disnake.ext import commands
 
 from json import load
 from os import listdir
+from asyncpg import create_pool
 
 
 def get_config():
@@ -27,6 +28,10 @@ class DeBot(commands.Bot):
         for event in listdir('events/'):
             if event.endswith('.py'):
                 self.load_extension(f'events.{event[:-3]}')
+
+    async def create_db_pool(self):
+        bot.db = await create_pool(dsn='postgres://postgres:1234@localhost:5432/debot')
+        await bot.db.execute('CREATE TABLE IF NOT EXISTS profiles (id bigint, prefix text);')
 
 
 bot = DeBot()
