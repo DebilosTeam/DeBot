@@ -19,7 +19,7 @@
 
 ## TODO
 ### Main features
-- [ ] Slash commands
+- [X] Slash commands (Implemented in disnake)
 - [ ] Fun commands
 - [ ] Moderation commands
 - [ ] Server owner commands
