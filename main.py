@@ -1,7 +1,13 @@
 from disnake import Intents
 from disnake.ext import commands
 
+from json import load
 from os import listdir
+
+
+def get_config():
+    with open(f'config.json') as config_file:
+        return load(config_file)
 
 
 class DeBot(commands.Bot):
@@ -25,4 +31,4 @@ class DeBot(commands.Bot):
 
 bot = DeBot()
 bot.load_all_extensions()
-bot.run('')
+bot.run(get_config()['token'])

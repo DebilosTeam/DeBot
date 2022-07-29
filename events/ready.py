@@ -1,5 +1,7 @@
 from disnake.ext import commands
-from disnake import Game
+from disnake import Activity, ActivityType
+
+from main import get_config
 
 
 class ReadyEvent(commands.Cog):
@@ -14,7 +16,9 @@ class ReadyEvent(commands.Cog):
             f"User: {self.bot.user}\n"
             f"ID: {self.bot.user.id}"
         )
-        await self.bot.change_presence(activity=Game(name='/help'))
+        await self.bot.change_presence(activity=Activity(type=get_config()['type'],
+                                                         name=get_config()['name'],
+                                                         url=get_config()['twitch_url']))
 
 
 def setup(bot):
