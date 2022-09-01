@@ -10,9 +10,9 @@
 <div align="center">
   <a href="https://gitlab.com/DebilosTeam/DeBot/-/issues">Send bug report</a>
   •
-  <a href="https://gitlab.com/DebilosTeam/DeBot#things-to-fix">Things to fix</a>
-  •
   <a href="https://gitlab.com/DebilosTeam/DeBot#TODO">TODO</a>
+  •
+  <a href="https://gitlab.com/DebilosTeam/DeBot#things-to-fix">Things to fix</a>
   •
   <a href="https://gitlab.com/DebilosTeam/DeBot#license-information">License Information</a>
 </div>
