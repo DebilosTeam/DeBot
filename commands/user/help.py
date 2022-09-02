@@ -1,7 +1,7 @@
-from disnake import ui, Embed, SelectOption, MessageInteraction
 from disnake.ext import commands
+from disnake import ui, Embed, SelectOption, MessageInteraction
 
-from datetime import datetime as dt
+from datetime import datetime
 
 
 class Embeds:
@@ -9,25 +9,22 @@ class Embeds:
         title='User commands',
         description='Here will be user commands',
         color=0xb49dd4,
-        timestamp=dt.utcnow()
+        timestamp=datetime.utcnow()
     )
-    page_one.set_footer(text='Copyright © Debilos Team 2022')
 
     page_two = Embed(
         title='Fun commands',
         description='Here will be fun commands',
         color=0xb49dd4,
-        timestamp=dt.utcnow()
+        timestamp=datetime.utcnow()
     )
-    page_two.set_footer(text='Copyright © Debilos Team 2022')
 
     page_three = Embed(
         title='Server owner commands',
         description='Here will be server owner commands',
         color=0xb49dd4,
-        timestamp=dt.utcnow()
+        timestamp=datetime.utcnow()
     )
-    page_three.set_footer(text='Copyright © Debilos Team 2022')
 
 
 class Dropdown(ui.Select):
@@ -74,9 +71,7 @@ class Help(commands.Cog):
         help_embed = Embed(title='Commands list',
                            description='Hello, you called help command, all the bot commands will be here',
                            color=0xb49dd4,
-                           timestamp=dt.utcnow())
-
-        help_embed.set_footer(text='Copyright © Debilos Team 2022')
+                           timestamp=datetime.utcnow())
 
         await inter.response.send_message(embed=help_embed, view=view)
 

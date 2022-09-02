@@ -1,0 +1,9 @@
+{
+    "INFO_COMMAND_DESCRIPTION": "Отправляет информацию о боте",
+    "AVATAR_COMMAND_DESCRIPTION": "Получить аватар пользователя",
+    "KICK_COMMAND_DESCRIPTION": "Выгоняет участника с сервера",
+    "BAN_COMMAND_DESCRIPTION": "Бан участника на сервере",
+    "PURGE_COMMAND_DESCRIPTION": "Удаление сообщений из текстового канала",
+    "UBL_MODERATOR_CONTROL_COMMAND_DESCRIPTION": "Добавление/удаление модераторов в Системе Объединенных Бан Листов (Только для создателей)",
+    "UBL_GUILD_CONTROL_COMMAND_DESCRIPTION": "Бан/разбан серверов в Системе Объединенных Бан Листов (Только для модераторов СОБЛ)"
+}

@@ -24,9 +24,7 @@ class EightBall(commands.Cog):
         answer = choice(ball_dict)
         embed = Embed(
             title='8 Ball',
-            color=0xb49dd4,
-            timestamp=datetime.utcnow()
-        )
+            color=0xb49dd4)
         embed.add_field(name='Your question', value=f'{question}')
         embed.add_field(name='Answer', value=f'{answer}')
         await inter.response.send_message(embed=embed)

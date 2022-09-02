@@ -1,0 +1,9 @@
+{
+    "INFO_COMMAND_DESCRIPTION": "Send bot information",
+    "AVATAR_COMMAND_DESCRIPTION": "Get user avatar",
+    "KICK_COMMAND_DESCRIPTION": "Kick member from server",
+    "BAN_COMMAND_DESCRIPTION": "Ban member on server",
+    "PURGE_COMMAND_DESCRIPTION": "Remove messages in text channel",
+    "UBL_MODERATOR_CONTROL_COMMAND_DESCRIPTION": "Add/remove moderators in Unified Ban List system (Creator only)",
+    "UBL_GUILD_CONTROL_COMMAND_DESCRIPTION": "Ban/unban guild in Unified Ban List system (UBL Mods only)"
+}

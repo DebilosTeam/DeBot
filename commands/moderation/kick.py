@@ -1,5 +1,5 @@
 from disnake.ext import commands
-from disnake import Member, Embed
+from disnake import Member, Embed, Localized
 
 from datetime import datetime
 
@@ -9,14 +9,21 @@ class Kick(commands.Cog):
         """Its cog for moderation command kick and can't be used in another cogs or main.py"""
         self.bot = bot
 
-    @commands.slash_command(description='Kick member from server')
+    @commands.slash_command(description=Localized(key='KICK_COMMAND_DESCRIPTION'))
     @commands.has_permissions(kick_members=True)
     async def kick(self, inter, member: Member, *, reason=None):
         if reason is None:
-            reason = "Not provided"
+            reason = 'Not provided'
+
+        embed = Embed(title='Member kicked',
+                      description='Member successfully kicked from guild',
+                      color=0xb49dd4)
+        embed.add_field(name='Kicked member', value=f'{member.display_name}')
+        embed.add_field(name='Moderator', value=f'{inter.author.display_name}')
+        embed.add_field(name='Reason', value=f'{reason}')
 
         await member.kick(reason=reason)
-        await inter.response.send_message(f"{member} " + f"{reason}")
+        await inter.response.send_message(embed=embed)
 
     @kick.error
     async def kick_perms_error(self, inter, error):

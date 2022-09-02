@@ -31,9 +31,12 @@ class DeBot(commands.Bot):
 
     async def create_db_pool(self):
         bot.db = await create_pool(dsn='postgres://postgres:1234@localhost:5432/debot')
-        await bot.db.execute('CREATE TABLE IF NOT EXISTS profiles (id bigint, prefix text);')
+        await bot.db.execute('CREATE TABLE IF NOT EXISTS banned_guilds (guild_id bigint, reason text);')
+        await bot.db.execute('CREATE TABLE IF NOT EXISTS ubl_moderators (user_id bigint);')
+        await bot.db.execute('CREATE TABLE IF NOT EXISTS warns (user_id bigint, guild_id bigint, warns bigint);')
 
 
 bot = DeBot()
+bot.i18n.load("localizations/")
 bot.load_all_extensions()
 bot.run(get_config()['token'])

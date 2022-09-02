@@ -1,8 +1,8 @@
-from disnake import Embed, __version__
 from disnake.ext import commands
+from disnake import Embed, __version__, Localized
 
-from datetime import datetime as dt
-from datetime import timedelta as td
+from datetime import datetime
+from datetime import timedelta
 from time import time
 
 
@@ -12,24 +12,25 @@ class Info(commands.Cog):
         self.bot = bot
         self.start_time = time()
 
-    @commands.slash_command(description='Send information about bot')
+    @commands.slash_command(name='info', description=Localized(key='INFO_COMMAND_DESCRIPTION'))
     async def info(self, inter):
         current_time = time()
         difference = int(round(current_time - self.start_time))
-        uptime = str(td(seconds=difference))
+        uptime = str(timedelta(seconds=difference))
 
-        info_embed = Embed(title='Information about bot',
+        embed = Embed(title='Information about bot',
                            color=0xb49dd4,
-                           timestamp=dt.utcnow())
-
-        info_embed.set_author(name=f'{self.bot.user.name}',
+                           timestamp=datetime.utcnow())
+        embed.set_author(name=f'{self.bot.user.name}',
                               icon_url=f'{self.bot.user.display_avatar}')
-        info_embed.set_footer(text='Copyright © Debilos Team 2022')
-        info_embed.add_field(name='Created by', value='Debilos Team')
-        info_embed.add_field(name='Uptime', value=f'{uptime}')
-        info_embed.add_field(name='Version', value='0.10.0')
-        info_embed.add_field(name='Library', value=f'Disnake v{__version__}')
-        await inter.response.send_message(embed=info_embed)
+        embed.set_footer(text='Copyright © Debilos Team 2022',
+                              icon_url='https://gitlab.com/uploads/-/system/group/avatar/15944551/resized-image-Promo'
+                                       '.jpeg?width=64')
+        embed.add_field(name='Created by', value='Debilos Team')
+        embed.add_field(name='Uptime', value=f'{uptime}')
+        embed.add_field(name='Version', value='0.10.0')
+        embed.add_field(name='Library', value=f'Disnake v{__version__}')
+        await inter.response.send_message(embed=embed)
 
 
 def setup(bot):
