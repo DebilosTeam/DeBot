@@ -27,7 +27,7 @@
 
 ### Other
 - [ ] Dashboard
-- [ ] Add localization for Russian and Ukraine languages
+- [ ] Add localization for Russian and Ukrainian languages
 
 ## Things to fix
 Nothing is broken
