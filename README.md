@@ -5,6 +5,7 @@
 <div align="center">
 
   # Multifunctional bot for Discord
+  # Development stoped
 </div>
 
 <div align="center">
